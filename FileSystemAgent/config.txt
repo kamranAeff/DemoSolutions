@@ -1,0 +1,6 @@
+﻿Notify Filter: FileName, DirectoryName, Attributes, Size, LastWrite, LastAccess, CreationTime, Security
+
+
+
+https://support.gfi.com/hc/en-us/articles/360012968833-Manually-Forcing-a-Service-to-Stop-If-Not-Responding
+https://support.4it.com.au/article/how-to-kill-a-windows-service-which-is-stuck-at-stopping/
