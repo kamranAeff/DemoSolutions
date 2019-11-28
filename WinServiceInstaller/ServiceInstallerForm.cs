@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Text;
 using System.Windows.Forms;
 using WinServiceInstaller.Core.Extensions;
 
@@ -25,18 +23,18 @@ namespace WinServiceInstaller
                 return;
 
             txtLog.Text = "";
-            var process = Extension.GetCmd(txtFrameworkPath.Text);
+            var cmd = Extension.GetCmd(txtFrameworkPath.Text);
 
-            process.Start();
+            cmd.Start();
 
-            using (StreamWriter sw = process.StandardInput)
+            using (StreamWriter sw = cmd.StandardInput)
             {
                 if (sw.BaseStream.CanWrite)
                     sw.WriteLine($@"InstallUtil {txtServicePath.Text}");
             }
 
-            process.WaitForExit();
-            txtLog.Text = process.StandardOutput.ReadToEnd();
+            cmd.WaitForExit();
+            txtLog.Text = cmd.StandardOutput.ReadToEnd();
         }
 
         private void btnUninstall_Click(object sender, EventArgs e)
@@ -46,18 +44,18 @@ namespace WinServiceInstaller
                 return;
 
             txtLog.Text = "";
-            var process = Extension.GetCmd(txtFrameworkPath.Text);
+            var cmd = Extension.GetCmd(txtFrameworkPath.Text);
 
-            process.Start();
+            cmd.Start();
 
-            using (StreamWriter sw = process.StandardInput)
+            using (StreamWriter sw = cmd.StandardInput)
             {
                 if (sw.BaseStream.CanWrite)
                     sw.WriteLine($@"InstallUtil -u {txtServicePath.Text}");
             }
 
-            process.WaitForExit();
-            txtLog.Text = process.StandardOutput.ReadToEnd();
+            cmd.WaitForExit();
+            txtLog.Text = cmd.StandardOutput.ReadToEnd();
         }
 
         private void btnFrameworkPath_Click(object sender, EventArgs e)
