@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Extensions\SystemExtension.cs" />
     <Compile Include="Core\Extensions\UIExtension.cs" />
     <Compile Include="ServiceInstallerForm.cs">
       <SubType>Form</SubType>

@@ -25,15 +25,8 @@ namespace WinServiceInstaller
                 return;
 
             txtLog.Text = "";
-            var procStartInfo = new ProcessStartInfo("cmd");
-            var process = new Process();
-            procStartInfo.RedirectStandardOutput = true;
-            procStartInfo.WorkingDirectory = txtFrameworkPath.Text;
-            procStartInfo.RedirectStandardInput = true;
-            procStartInfo.UseShellExecute = false;
-            procStartInfo.CreateNoWindow = true;
+            var process = Extension.GetCmd(txtFrameworkPath.Text);
 
-            process.StartInfo = procStartInfo;
             process.Start();
 
             using (StreamWriter sw = process.StandardInput)
@@ -48,16 +41,13 @@ namespace WinServiceInstaller
 
         private void btnUninstall_Click(object sender, EventArgs e)
         {
-            txtLog.Text = "";
-            var procStartInfo = new ProcessStartInfo("cmd");
-            var process = new Process();
-            procStartInfo.RedirectStandardOutput = true;
-            procStartInfo.WorkingDirectory = txtFrameworkPath.Text;
-            procStartInfo.RedirectStandardInput = true;
-            procStartInfo.UseShellExecute = false;
-            procStartInfo.CreateNoWindow = true;
+            if (txtFrameworkPath.IsEmpty()
+                || txtServicePath.IsEmpty())
+                return;
 
-            process.StartInfo = procStartInfo;
+            txtLog.Text = "";
+            var process = Extension.GetCmd(txtFrameworkPath.Text);
+
             process.Start();
 
             using (StreamWriter sw = process.StandardInput)

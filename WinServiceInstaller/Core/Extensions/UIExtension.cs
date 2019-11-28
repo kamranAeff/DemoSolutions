@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace WinServiceInstaller.Core.Extensions
 {
-    static partial class UIExtension
+    static partial class Extension
     {
         static internal bool IsValid(this Control current)
         {
