@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystemAgent", "FileSyst
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinServiceInstaller", "WinServiceInstaller\WinServiceInstaller.csproj", "{A642DFA2-6560-41D1-8A77-4DDA8E50B3CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TempCleanerService", "TempCleanerService\TempCleanerService.csproj", "{6CB684C4-268A-4166-82EE-3B0C70D469A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A642DFA2-6560-41D1-8A77-4DDA8E50B3CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A642DFA2-6560-41D1-8A77-4DDA8E50B3CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A642DFA2-6560-41D1-8A77-4DDA8E50B3CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CB684C4-268A-4166-82EE-3B0C70D469A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CB684C4-268A-4166-82EE-3B0C70D469A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CB684C4-268A-4166-82EE-3B0C70D469A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CB684C4-268A-4166-82EE-3B0C70D469A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
